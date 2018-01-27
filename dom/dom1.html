@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content:"";
+            clear: both;
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .top{
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+        .content1 {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            margin: 0 auto;
+        }
+        .content2{
+            width: 400px;
+            height: 400px;
+            background-color: deepskyblue;
+            margin: 0 auto;
+        }
+        .content3{
+            width: 400px;
+            height: 400px;
+            background-color: lawngreen;
+            margin: 0 auto;
+        }
+        .content4{
+            width: 400px;
+            height: 400px;
+            background-color: palevioletred;
+            margin: 0 auto;
+        }
+        .content{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+       .content1{
+            display: block;
+        }
+        li{
+            float: left;
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 15px ;
+            background-color: #00aaee;
+            bottom:19px;
+            left:583px;
+            text-align: center ;
+            line-height: 15px;
+            border: 1px solid black;
+        }
+        ul{
+            bottom:19px;
+            left:583px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="content" id="context">
+        <div class="content1" ></div>
+        <div class="content2" ></div>
+        <div class="content3" ></div>
+        <div class="content4" ></div>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+</body>
+<script>
+    var aAL = document.getElementById ("context");
+    var aOL = document.getElementsByTagName ("li");
+    for(var i=0;i<aOL.length;i++){
+        aOL[i].index = i;
+        aOL.onmouseover = function () {
+            for(var j=0;j<aOL.length;j++){
+                aAL[j].className=""
+            }
+            aAL.className="content1";
+
+        }
+
+    }</script>
+</html>

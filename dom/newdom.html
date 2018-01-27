@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复习标签页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content :"";
+            display: block;
+            clear: both;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .box{
+            border: 1px solid #dddddd;
+            width: 450px;
+            margin: 0 auto;
+        }
+        .header li{
+            float: left;
+            width: 100px;
+            text-align: center ;
+
+        }
+        .header {
+            color: #ffffff;
+         background-color: #212121;
+            border: 1px solid #212121;
+
+        }
+        .bottom div{
+            /*position: absolute;*/
+
+            /*z-index: 10 ; !*重叠关系*!*/
+            display: none;
+
+        }
+        .active{
+            background-color: #dddddd;
+            color: #333333;
+        }
+        .bottom .active{
+            display: block;
+        }
+    </style>
+</head>
+<div class="box">
+    <div class="header" id="nav">
+        <ul class="clearfix">
+            <li class="active">第一课</li>
+            <li>第二课</li>
+            <li>第三课</li>
+        </ul>
+    </div>
+    <div class="bottom" id="content">
+        <div class="active">第一节课的内容</div>
+        <div>第二节课的内容</div>
+        <div>第三节课的内容</div>
+    </div>
+</div>
+<body>
+<script>
+    var aAL = document.getElementById ("nav").getElementsByTagName ("li");
+    var oAL = document.getElementById ("content").getElementsByTagName ("div");
+    for(var i=0;i<aAL.length;i++){
+        aAL[i].index = i;
+        aAL[i].onmouseover = function () {
+            for(var j=0;j<aAL.length;j++){
+                oAL[j].className ="";
+                aAL[j].className ="";
+            }this.className ="active";
+            oAL[this.index].className ="active";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 40px;
+            background-color: red;
+            margin-left: 80px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="change-div"></div>
+<div class ="change-div"></div>
+<div class ="change-div"></div>
+</body>
+<script>
+    var oDiv = document.getElementsByClassName ("change-div");
+    var timer;
+    for(var i =0;i<oDiv.length;i++) {
+        oDiv[i].index = i;
+        oDiv[i].onmouseover = function () {
+            clearInterval(this.timer);
+            var asd=this;
+            this.timer = setInterval(function () {
+                if (oDiv[asd.index].offsetWidth == 600) {
+                    clearInterval(asd.timer)
+                }
+                else {
+                    oDiv[asd.index].style.width = oDiv[asd.index].offsetWidth + 10 + "px";
+                }
+
+
+            }, 50);
+
+        };
+        oDiv[i].onmouseout = function () {
+           clearInterval (this.timer );
+            var zxc = this;
+           this. timer =  setInterval(function () {
+                if(oDiv[zxc.index].offsetWidth ==300){
+                    clearInterval (timer )
+                } else{
+                    oDiv[zxc.index].style.width = oDiv[zxc.index].offsetWidth-10+"px";
+                }
+
+
+
+            },50)
+
+        }
+    }
+
+</script>
+</html>

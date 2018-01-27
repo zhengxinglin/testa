@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幻灯片复习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content:"";
+            clear: both;
+            display: block;
+        }
+        body {
+            background-color: #333333;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .img-bar{
+            width: 470px;
+        }
+        .box{
+            width: 635px;
+            margin: 30px auto;
+            border-radius: 10px ;
+            background: #ffffff;
+            /*overflow: hidden;  !* 隐藏*!*/
+            height: 339px;
+            padding: 10px ;
+            position: relative;
+        }
+        .radiu-btn li{
+            height: 20px;
+            width: 20px;
+            background-color: #f90;
+            opacity: 0.7;    /*透明度*/
+            filter:alpha(opacity=70); /*透明度*/
+            float: left;
+            border-radius: 50%;
+            text-align: center ;
+            line-height: 20px;
+            font-size: 12px;
+            color: white;
+            margin-right: 10px;
+        }
+        .radiu-btn {
+            position: absolute;
+        }
+        .left-bt{
+            left: 15px;
+            bottom: 15px;
+        }
+        .left-bt li{
+            line-height: 17px;
+        }
+        .left-btn {
+            right: 15px;
+            bottom: 15px;
+        }
+        .radiu-btn .active{
+            background-color: #f60;
+        }
+        .box .img-bar img{
+            width: 632px;
+            height: 340px;
+        }
+        .box .img-bar li{
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="img-bar" id="content" >
+        <ul class="clearfix" style="width: 5000px">
+            <li><img src="images/xmad_15161024312126_mIVLw.jpg  " alt=""></li>
+            <li><img src="images/xmad_15160273796228_QSeKH.jpg  " alt=""></li>
+            <li><img src="images/xmad_15161045260253_mAohp.jpg " alt=""></li>
+            <li><img src="images/xmad_15150753566383_yLfQU.jpg " alt=""></li>
+            <li><img src="images/xmad_15150753566383_yLfQU.jpg" alt=""></li>C
+        </ul>
+    </div>
+    <div id="content1">
+        <ul class="radiu-btn left-bt">
+            <li>&lt;</li>
+            <li>&gt;</li>
+        </ul>
+    </div>
+    <div id="content2">
+        <ul class="radiu-btn left-btn">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+var aAL = document.getElementById ("content").getElementsByTagName ("li");
+var aZL = document.getElementById ("content1").getElementsByTagName ("li");
+var aQL =  document .getElementById ("content2").getElementsByTagName ("li");
+var globalindex = 0;
+for(var j=0; j<aQL.length;j++){
+    aQL[j] .index=j;
+    aQL[j].onmouseover = function () {
+        change(this.index);
+        globalindex=index;
+    }
+}
+aZL[0].onclick =function () {
+    change(--globalindex);
+};
+aZL[1].onclick =function () {
+    change(++globalindex);
+};
+function change(a) {
+    if(a==5){
+        globalindex =0;
+        a=0;
+    }
+    if(a==-1){
+        globalindex =4;
+        a=4;
+    }
+    for(var i=0;i<aQL.length;i++){
+        aQL[i].className="";
+        aAL[i].style.display="none";
+    }
+    aQL[a].className="active";
+    aAL[a].style.display="block";
+}
+</script>
+</html>
