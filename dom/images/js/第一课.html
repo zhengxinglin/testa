@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content :"";
+            display: block;
+            clear: both;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .box{
+            border: 1px solid #dddddd;
+            width: 450px;
+            margin: 0 auto;
+        }
+        .header li{
+            float: left;
+            width: 100px;
+            text-align: center ;
+
+        }
+        .header {
+            color: #ffffff;
+            background-color: #212121;
+            border: 1px solid #212121;
+
+        }
+        .bottom div{
+            /*position: absolute;*/
+
+            /*z-index: 10 ; !*重叠关系*!*/
+            display: none;
+
+        }
+        .active{
+            background-color: #dddddd;
+            color: #333333;
+        }
+        .bottom .active1{
+            display: block;
+        }
+        .header .active{
+            background-color: #f56600;
+        }
+    </style>..
+<body>
+<div class="box">
+    <div class="header" id="nav">
+        <ul class="clearfix">
+            <li class="active">第一课</li>
+            <li >第二课</li>
+            <li >第三课</li>
+        </ul>
+    </div>
+    <div class="bottom" id="content">
+        <div class="active1">第一节课的内容</div>
+        <div>第二节课的内容</div>
+        <div>第三节课的内容</div>
+    </div>
+    <script>
+//        $("li").click(function () {
+//            $(this).toggleClass("active")
+//        })
+        var $p = $("li");
+        var $a = $(".bottom > div");
+        $p.click(function(){
+            $(this).add($(a).).addClass("active").siblings().removeClass("active")
+//            $("li").removeClass("active");
+//            $(this).addClass("active");
+//            $a.css("display","none");
+//            $a.eq($(this).index()).css("display","block");
+        })
+    </script>
+</div>
+</body>
+</html>

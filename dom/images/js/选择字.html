@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<input type="text">
+<!--<input type="button" value="点击" >-->
+<ul>
+    <li>你好</li>
+    <li>我好</li>
+    <li>你家好</li>
+    <li>真的好</li>
+    <li>怒号</li>
+    <li>不好</li>
+    <li>天下</li>
+    <li>哦哦</li>
+</ul>
+<script>
+
+
+    $("input").keyup(function () {
+        $("li").css("background","none");
+        if($(this).val()!=""){
+            $("li:contains("+$(this).val()+")").css("background","blue")
+        }
+    })
+//    $(function () {
+//        var zxc = $("input").keydown().val("li");
+//        zxc.keydown().siblings("ul>li:contains("+zxc.val()+")").css("color","blue")
+//        zxc.keydown(function () {
+//           $("zxc:contains())
+//        })
+////        zxc.eq(1).click(function () {
+////            $("li:contains("+zxc.eq(0).val()+")").css("color","blue");
+//        })
+//    })
+</script>
+</body>
+</html>
