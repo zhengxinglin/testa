@@ -28,10 +28,14 @@
     }) ;
 
     $("#stop1").click(function () {
-        $("#box").stop("false","true")
+        $("#box").stop()
     }) ;
     $("#animate1").click(function () {
-        $("#box").animate(width: 1000px;color:red)
+        $("#box").animate({
+            opacity:0.25,
+            width:'500px',
+            left:'200px',
+        },1000)
     }) ;
 </script>
 </body>

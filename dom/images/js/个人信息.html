@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<style>
+    input{
+      outline: none;
+  }
+    div{
+    margin-top: 5px;
+    }
+    .content1{
+        outline: none ;
+    }
+</style>
+<body>
+<form action="" method="post" id="regForm">
+    <fieldset>
+        <legend>个人基本信息</legend>
+        <div>
+            <span>名称：</span>
+            <input type="text" value="名称" >
+        </div>
+        <div>
+            <span>密码：</span>
+            <input type="password" value="123" >
+        </div>
+        <div>
+            <span>详细信息：</span>
+            <textarea name="" id="" cols="30" rows="10" class="content1" >详细信息</textarea>
+        </div>
+    </fieldset>
+</form>
+<script>
+    var int = $("div>input");
+    $(":input").focus(function () {
+        $(this).val("").css("background","blue");
+
+
+    });
+    $(":input").blur(function () {
+        $(this).css("background","none");
+    });
+//    $("input").blur(function () {
+//       this.val=defaultValue()
+//    });
+//
+//    $("textarea").focus(function () {
+//        $(this).html("").css("background","red")
+//    });
+//    $("textarea").blur(function () {
+//        $(this).html("详细信息").css("background","none")
+//    })
+</script>
+</body>
+</html>

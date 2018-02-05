@@ -24,14 +24,19 @@
     <li>哦哦</li>
 </ul>
 <script>
+        $("input").keyup(function () {
+            $("li").css("background","none");
+            if($(this).val()!=""){
+                $("li:contains("+$(this).val()+")").css("background","blue")
+            }
+        })
 
-
-    $("input").keyup(function () {
-        $("li").css("background","none");
-        if($(this).val()!=""){
-            $("li:contains("+$(this).val()+")").css("background","blue")
-        }
-    })
+//    $("input").keyup(function () {
+//        $("li").css("background","none");
+//        if($(this).val()!=""){
+//            $("li:contains("+$(this).val()+")").css("background","blue")
+//        }
+//    })
 //    $(function () {
 //        var zxc = $("input").keydown().val("li");
 //        zxc.keydown().siblings("ul>li:contains("+zxc.val()+")").css("color","blue")

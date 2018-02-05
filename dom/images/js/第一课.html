@@ -45,7 +45,7 @@
             background-color: #dddddd;
             color: #333333;
         }
-        .bottom .active1{
+        .bottom .actived{
             display: block;
         }
         .header .active{
@@ -62,7 +62,7 @@
         </ul>
     </div>
     <div class="bottom" id="content">
-        <div class="active1">第一节课的内容</div>
+        <div class="active">第一节课的内容</div>
         <div>第二节课的内容</div>
         <div>第三节课的内容</div>
     </div>
@@ -70,10 +70,10 @@
 //        $("li").click(function () {
 //            $(this).toggleClass("active")
 //        })
-        var $p = $("li");
-        var $a = $(".bottom > div");
-        $p.click(function(){
-            $(this).add($(a).).addClass("active").siblings().removeClass("active")
+        var p = $("li");
+        var a = $(".bottom>div");
+        p.click(function(){
+            $(this).add($(".bottom>div:eq("+$(this).index()+")")).addClass("active").siblings().removeClass("active")
 //            $("li").removeClass("active");
 //            $(this).addClass("active");
 //            $a.css("display","none");

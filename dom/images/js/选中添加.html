@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        select{
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<select multiple="multiple" name="" id="left">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+</select>
+<select multiple="multiple" name="" id="right">
+    <option value="">6</option>
+    <option value="">5</option>
+    <option value="">4</option>
+    <option value="">3</option>
+    <option value="">2</option>
+    <option value="">1</option>
+</select>
+<button>把左边加到右边</button>
+<button>把右边加到左边</button>
+<button>全部删除右边</button>
+<button>全部添加到右边</button>
+<script>
+    $(function () {
+        $("button").eq(0).click(function () {
+            if($("#left>option").is(":selected")){
+                $("#left>option:selected").appendTo("#right")
+            }
+        });
+        $("button").eq(1).click(function () {
+            if($("#right>option").is(":selected")){
+                $("#right>option:selected").appendTo("#left")
+            }
+        });
+        $("button").eq(2).click(function () {
+            $("#right>option").html("")
+        });
+        $("button").eq(3).click(function () {
+            $("#left>option").appendTo("#right")
+        });
+        $("#left").on("click","option",function () {
+            $("#left>option").dblclick(function () {
+                $("#left>option:selected").appendTo("#right")
+            });
+        });
+        $("#left").on("dblclick","option",function () {
+            $("#right>option").dblclick(function () {
+                $("#right>option:selected").appendTo("#left")
+            });
+        });
+
+
+    })
+</script>
+</body>
+</html>

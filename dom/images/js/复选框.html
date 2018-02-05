@@ -8,33 +8,64 @@
 <body>
 <h1>你爱好的运动是？</h1>
 <div class="zxc">
-    <input type="checkbox" >足球
-    <input type="checkbox" >羽毛球
-    <input type="checkbox" >篮球
-    <input type="checkbox" >羽毛球
+    <input type="checkbox" value="足球" >足球
+    <input type="checkbox" value="乒乓球" >乒乓球
+    <input type="checkbox" value="篮球" >篮球
+    <input type="checkbox" value="羽毛球" >羽毛球
 </div>
 <div class="asd" >
     <input type="button" value="全选" >
     <input type="button" value="全不选" >
     <input type="button" value="反选">
+    <input type="button" value="提交">
 </div>
 <script>
+    var sum = [];
 $(function () {
     var but = $(".asd input");
     $(but).eq(0).click(function () {
-        $(".zxc>input").prop("checked",true)
+//        $(".zxc>input").prop("checked",true);
+        $(".zxc>input").trigger("click")
+
     });
     $(but).eq(1).click(function () {
         $(".zxc>input").prop("checked",false)
     });
     $(but).eq(2).click(function () {
-        $(".zxc>input").each(function (index,elem) {
-            elem.checked = !elem.checked;
+        $(".zxc>input").trigger("click")
+//        $(".zxc>input").each(function (index,elem) {
+//            elem.checked = !elem.checked;
+//
+//
+//            })
 
-            })
 
     });
-})
+    var zxc = $(".zxc>input");
+    $(".zxc>input").click(function () {
+//        console.log($(this).is(":checked"));
+        if($(this).is(":checked")){
+            sum.push($(this).val())
+        }else{
+            remove($(this).val())
+
+        }
+    });
+    function remove(arr) {
+        for(var i=0;i<sum.length;i++){
+            if(sum[i]==arr){
+                sum.splice(i,1)
+            }
+
+        }
+
+    }
+
+    $(but).eq(3).click(function () {
+        alert(sum)
+    })
+});
+
 </script>
 
 </body>

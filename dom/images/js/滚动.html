@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        textarea{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<button>放大</button>
+<button>缩小</button>
+<textarea name="" id="" cols="30" rows="10">1234567891111
+    1111111
+    1
+    1111111
+    1111111
+    11111
+    1111111
+    1
+    1111111
+    1111
+    111111
+    1111111
+    1
+    111111
+    1111
+    1111111
+    1111111
+</textarea>
+<script>
+    $("button").eq(0).click(function () {
+        $("textarea").animate({
+            scrollTop:"+=100px"
+
+        })
+    });
+    $("button").eq(1).click(function () {
+        $("textarea").animate({
+            scrollTop:"-=100px"
+
+        })
+    })
+</script>
+</body>
+</html>

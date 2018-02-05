@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+       .top1{
+           position: relative;
+       }
+        .content1 {
+            position: absolute;
+            left: 80px;
+            top:-5px
+        }
+        p{
+            width: 80px;
+            border-bottom:3px solid ;
+            margin-top: 5px;
+            text-align: center ;
+            z-index: 12;
+        }
+        .top1 ul{
+            display: none;
+        }
+         #box .active{
+            display: block;
+        }
+        #box ul{
+            width: 30px;
+            height: 100px;
+            border: 1px solid #00d20d;
+
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li class="top1">
+        <P  >菜单一</P>
+        <ul class="content1">
+            <li>12</li>
+            <li>21</li>
+            <li>12</li>
+            <li>21</li>
+        </ul>
+    </li>
+    <li class="top1">
+        <p >菜单二</p>
+        <ul class="content1">
+            <li>12</li>
+            <li>12</li>
+            <li>21</li>
+        </ul>
+    </li>
+    <li class="top1">
+        <p >菜单三</p>
+        <ul class="content1">
+            <li>12</li>
+            <li>21</li>
+            <li>12</li>
+        </ul>
+    </li>
+    <li class="top1">
+        <p >菜单四</p>
+        <ul class="content1">
+            <li>12</li>
+            <li>21</li>
+            <li>12</li>
+        </ul>
+    </li>
+    <li class="top1">
+        <p >菜单五</p>
+        <ul class="content1">
+            <li>21</li>
+            <li>12</li>
+            <li>12</li>
+        </ul>
+    </li>
+    <li class="top1">
+        <p>菜单六</p>
+        <ul class="content1">
+            <li>12</li>
+            <li>12</li>
+            <li>12</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    $(function () {
+        $("p").mouseout(function () {
+            $("p").siblings().css("");
+            $("p").siblings().removeClass("active")
+        });
+        $("p").mouseover(function () {
+            $(this).css({background:"white",borderColor:"green"});
+            $("p").siblings().removeClass("active");
+            $(this).siblings().addClass("active");
+        });
+
+    })
+</script>
+</body>
+</html>
