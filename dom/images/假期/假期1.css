@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+ul{
+    list-style-type: none;
+}
+.top-image{
+    width: 1130px;
+    height: 97.99px;
+    display: block;
+    margin: 0 auto;
+}
+.content{
+    width: 100%;
+    height: 588px;
+    position: relative;
+}
+.content-image img{
+    background: center ;
+    margin-left: -533px;
+    /*width: 1400px;*/
+    /*height: 600px;*/
+}
+.content .content1{
+    width: 410px;
+    height: 556px;
+    background-color: white;
+    float: right;
+    position: absolute;
+    right: 109px;
+    top: 31px;
+}
+.context1{
+    width: 410px;
+    height: 82px;
+    text-align: center ;
+    line-height: 82px;
+}
+.context1 a{
+    font-size: 24px;
+    color: #f56600;
+    margin: 20px;
+    text-decoration: none ;
+}
+.border-line{
+    border: 1px solid #757575;
+}
+.content1 input{
+    width: 346px;
+    height: 50px;
+    margin-left: 33px;
+    margin-top: 15px;
+}
+.content .content1 .button{
+    background-color: #f56600;
+    margin-top: 23px;
+}
+a{
+    text-decoration: none ;
+}
+.context2{
+    width: 348px;
+    height: 19px;
+    text-align: center ;
+    margin-top: 8px;
+}
+.context2-left{
+    float: left;
+    margin-left: 34px;
+}
+.context2-left a{
+    color: #f56600;
+}
+.context2-right{
+    float: right;
+    margin-right: -34px;
+}
+.context2-right a{
+    color: #757575;
+}
+.context3{
+    margin-top: 115px;
+    width: 348px;
+    background: center ;
+    margin-left: 30px;
+    height: 150px;
+    /*position: relative;*/
+}
+.context3 fieldset{
+    border:0;
+    border-top: 1px solid #bbb;
+    color: #bbb;
+    font-size: 14px;
+    /*padding-top: 20px;*/
+    /*text-align: center ;*/
+}
+.context3 a{
+    width: 30px;
+    height: 30px;
+    background-color: #757575;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 15px;
+    margin-top: 20px;
+    /*position: relative;*/
+}
+.context3-2{
+    text-align: center ;
+}
+.context3 .context3-2  i{
+    background-image: url("../图标.png");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /*/*margin: 0 14px;*/
+     margin: 4px auto 0;
+    /*left: 15px;*/
+
+}
+.context3 .qq i{
+    background-position: -18px 0;
+    /*position: absolute;*/
+    /*left: 15px;*/
+    /*top: 5px;*/
+}
+.context3 .sina i{
+    background-position: -36px 0;
+}
+.context3 .alipay i{
+    background-position: -60px 1.8px;
+}
+.context3 .wechat i{
+    background-position: -85px 1.8px;
+}
