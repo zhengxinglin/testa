@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    clear: both;
+    display: block;
+    content:"";
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.content{
+    margin:0 auto;
+    width: 1226px;
+}
+/* topbar start */
+.topbar{
+    height: 40px;
+    background-color: black;
+    text-decoration: none ;
+    color: #b0b0b0;
+    font-size: 12px ;
+    line-height: 40px;
+}
+
+.topbar a{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+.topbar .content-left{
+    float: left;
+}
+.topbar span{
+    margin:0 5px ;
+}
+.topbar .content-right{
+    float: right;
+
+}
+.topbar a:hover{
+    color: white;
+}
+.topbar .minicar:hover{
+    color: #f56600;
+}
+.topbar .minicar {
+    height: 40px;
+    color: #b0b0b0;
+    width: 120px;
+    display: block;
+    float: right;
+    text-align: center ;
+    margin-left: 30px;
+}
+/* topbar end */
+/* header start */
+.header .content {
+    padding: 20px 0;
+}
+.header .header-left {
+    float: left;
+}
+.header .header-left a{
+    display: block;
+    height: 55px;
+    width: 55px;
+    background-color: #ff6700;
+}
+.header .header-left a:after{
+    content:"";
+    height: 55px;
+    width: 55px;
+    background: url("../images/mi-logo.png")no-repeat 50% 50%;
+    display: block;
+}
+.header .header-mid {
+    float:left;
+   height:88px ;
+    padding: 12px 0 0 30px;
+    width: 820px;
+
+}
+.header .header-mid ul {
+    float:left;
+    list-style-type: none;
+}
+.header .header-mid li{
+    float: left;
+}
+.header .header-mid a{
+    font-size: 16px;
+    text-decoration: none ;
+    padding: 26px 10px 38px;
+    color: #333;
+    text-align:center ;
+}
+.header .header-mid a:hover {
+    color: #f56600;
+}
+.header .header-right {
+    position: relative;
+}
+.header .header-right .search {
+    width: 53px;
+    height: 54px;
+    float: right;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    line-height: 54px;
+    text-align: center ;
+
+}
+.header .header-right :hover {
+    color:white;
+}
+.header .header-right input{
+    height: 53px;
+    width: 214px;
+    padding: 1px 17px;
+    border: 1px solid #e0e0e0;
+    border-right: 0;
+}
+.header .header-right {
+   float: right;
+}
+.header .header-right .hr-btn {
+    font-size: 12px;
+    background: #eee;
+    color: #757575;
+    position: absolute;
+    top: 14px;
+    right: 62px;
+}
+.header .hr-btn a{
+    text-decoration: none ;
+    margin-left: 5px;
+    padding: 0 5px;
+    font-size: 12px;
+    background: #eee;
+    color: #757575;
+}
+/* header end */

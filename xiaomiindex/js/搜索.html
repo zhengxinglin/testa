@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            text-align: center ;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p><input type="text" placeholder="请输入网址"></p>
+    <button id="xxx">确定</button>
+</div>
+
+<script>
+var iPUT = document.getElementsByTagName ("input");
+var bUTT = document.getElementById ("xxx");
+
+bUTT.onclick = function (){
+    var thisVal = iPUT[0].value;
+    location.href="http://"+thisVal;
+}
+iPUT[0].onkeydown = function (e) {
+    var thisVal = iPUT[0].value;
+    var keyCod = e.keyCode;
+    if(keyCod==13){
+        location.href ="http://"+thisVal ;
+    }
+}
+</script>
+</body>
+</html>

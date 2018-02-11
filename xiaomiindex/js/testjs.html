@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ var lunch=window.confirm("明晚上吃什么水饺");
+ if (lunch){
+     var num=window.prompt("几个人吃啊");
+     var personNnm=0;
+     var personName=new Array();
+     var isFor=true;
+     if(!isNaN(num)&&num){
+         personNnm=num;
+         for(var i=0;i<personNnm;i++){
+             var thisperson=window.prompt("第"+(i+1)+"个人叫什么");
+             personName.push(thisperson);
+               if(!personName[i]) {
+                   isFor = false;
+                   break;
+               }         }
+         if(isFor){
+                   for (var j=0;j<personNnm;j++){
+                       var eat=personName[j]+"吃";
+                       var a =Math.random();
+                        a =Math.floor(a*10);
+                       switch (a){
+                           case 1:
+                               alert(eat+"吃韭菜鸡蛋");
+                               break;
+                           case 2:
+                               alert(eat + "吃酸菜猪肉");
+                               break;
+                           case 3:
+                               alert(eat + "吃虾仁猪肉");
+                               break;
+                           case 4:
+                               alert(eat + "吃香菜猪肉");
+                               break;
+                           case 5:
+                               alert(eat  + "吃玉米猪肉");
+                               break;
+                           case 6:
+                               alert(eat + "吃香菇猪肉");
+                               break;
+                           case 7:
+                               alert(eat+ "吃青菜猪肉");
+                               break;
+                           case 8:
+                               alert( eat+ "吃素三鲜");
+                               break;
+                           case 9:
+                               alert(eat + "吃白菜猪肉");
+                               break;
+                           case 10:
+                               alert(eat + "吃韭菜猪肉");
+                               break;
+                           default:
+                               alert(eat + "不配吃水饺，喝西北风")
+0
+
+
+
+                       }
+
+
+                   }
+         }else {
+             alert("蛤蟆皮")
+         }
+
+
+     }else{
+         alert("爱吃不吃");
+     }
+
+ }else{
+        alert("不吃请立即上天");
+     }
+
+</script>
+</body>
+</html>

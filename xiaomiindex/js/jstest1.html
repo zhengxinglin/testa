@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var girl={
+//        name:"安吉拉adult",
+//        age:"18",
+//        study:{
+//            highschool:"黑龙江大学",
+//            middleschool:"红星中学"
+//        }
+//    }
+//    var boy={
+//        name:"如花"
+//    }
+//    var aa =window.prompt("有没有对象？");
+//    if(aa=="有"){
+//        alert("她的姓名叫"+girl.name+"年龄"+girl.age+"毕业学校是"+girl.study.highschool+girl.study.middleschool);
+//    } else if(aa=="没有"){
+//        alert("今晚不能吃饭，"+"我手上有一个好姑娘名字叫"+boy.name);
+//    }
+//    else
+//    {
+//        alert("别打岔");
+//    }
+var which=window.confirm("今晚吃啥");
+if (which){
+    var bb=window.prompt("几个人吃");
+    var a=Math.random();
+    a =a*10;
+    a =Math.floor(a);
+    document.write(a);
+    switch(a){
+        case 0:
+            alert(bb+"个人"+"火锅");
+            break;
+        case 1:
+            alert("香菜");
+            break;
+        case 2:
+            alert("萝卜");
+            break;
+        case 3:
+            alert("韭菜");
+        default:
+            alert("肉")
+    }
+} else{alert("知道还问我")}
+</script>
+</body>
+</html>
