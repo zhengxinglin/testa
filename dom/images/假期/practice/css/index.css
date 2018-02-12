@@ -6,6 +6,17 @@
     height: 40px;
     background: #333;
 }
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none ;
+}
+.clearfix :after{
+    content: "";
+    clear: both;
+    display: block;
+}
 @font-face {
     font-family: 'iconfont';
     src: url('../font/iconfont.eot');
@@ -21,7 +32,7 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-.top .content {
+.content {
     margin: 0 auto;
     height: 40px;
     width: 1226px;
@@ -51,3 +62,154 @@
     text-align: center ;
     margin-left: 10px;
 }
+/**/
+.header .content {
+   padding: 20px 0;
+
+}
+.header .content .content-left a{
+    display: block;
+    width: 55px;
+    height: 55px;
+    background:#ff6700;
+    float: left;
+}
+.header .content-left a:after{
+    content:"";
+    background: url("../image/小米.png") center;
+    width: 55px;
+    height: 55px;
+    display: block;
+}
+.header .content-mid ul{
+    margin-left: 210px;
+}
+.header .content-mid li{
+    float: left;
+    height: 88px;
+    margin-left: 10px;
+    line-height: 60px;
+}
+.header .content-mid a{
+    font-size: 16px;
+    color: #333;
+}
+.header .content-right{
+    float: right;
+    position: relative;
+}
+.header .content-right input{
+    height: 48px;
+    width: 200px;
+    margin-right: -1px;
+    border: 1px solid #e0e0e0;
+    padding: 0 20px;
+
+}
+.header .content-right .btn{
+    width: 50px;
+    height: 48px;
+    display: inline-block;
+    float: right;
+    border: 1px solid #e0e0e0;
+    line-height: 50px;
+    text-align: center ;
+}
+.header.content-right i{
+    font-size: 24px;
+}
+.header .content-right .btn-content{
+    position: absolute;
+    top: 4px;
+    right: 55px;
+}
+.header .content-right .btn-content a{
+    font-size: 12px;
+    color: #757575;
+    background: #ddd;
+}
+/*/
+ */
+.sider .content {
+    height: 460px;
+    position: relative;
+    margin-top: 20px;
+}
+.sider .content .sider-content {
+    background-color: #f56600;
+    height: 460px;
+    width: 1260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../image/背景.jpg");
+}
+.sider .content .sider-left{
+    width: 234px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background: rgba(0,0,0,0.6);
+}
+.sider .content .sider-left a{
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    height: 42px;
+    text-align: center ;
+}
+.sider .content .sider-left ul{
+    padding: 20px 20px 0;
+}
+.sider .content .sider-left i{
+    float: right;
+    font-size: 20px;
+}
+.sider .content .botom1{
+    width: 1028px;
+    height: 66px;
+    /*background: black;*/
+    position: absolute;
+    top: 40%;
+    left: 232px;
+}
+.sider .content .botom1 a{
+    display: block;
+    width: 42px;
+    height: 66px;
+    /*background-color: gold;*/
+    float: left;
+    background-image: url("../image/方向.png");
+}
+.sider .content .botom1 a:first-child {
+    margin-left: 2px; 
+}
+.sider .content .botom1 a:last-child{
+    float: right;
+    background-position: -42px;
+
+}
+.sider .content .botom2{
+    width: 160px;
+    height: 30px;
+    /*background-color: #00d20d;*/
+    position: absolute;
+    bottom: 20px;
+    right: 12px;
+}
+.sider .botom2 a{
+    width: 8px;
+    height: 8px;
+    border-radius: 50% ;
+    border: 2px solid #333333;
+    background-color: #757575;
+    display: block;
+    float: left;
+}
+.sider .botom2 li{
+    float: left;
+    margin: 0 5px;
+}
+
