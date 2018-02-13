@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #b0b0b0;
+            margin: 40px auto ;
+            text-align: center ;
+        }
+    </style>
+</head>
+<body>
+<div class="box" >
+    <p id="nowtime" >100</p>
+    <button id="right" >开始</button>
+</div>
+<script>
+    var oAZ = document.getElementById ("nowtime");
+    var oQZ = document.getElementById ("right");
+    var num = 100;
+    var key = 1;
+    var timer;
+    function changetime() {
+        oAZ.innerText = num;
+        num--;
+    }
+    oQZ.onclick = function () {
+        if(key==1){
+           timer = setInterval("changetime()",1000);
+            this.innerText ="暂停"
+        }
+        else{
+            clearInterval (timer);
+            this.innerText ="开始"
+        }
+        key*=-1;
+    }
+</script>
+</body>
+</html>
