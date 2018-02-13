@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin: 0 auto;
+            width: 100%;
+            text-align: center ;
+        }
+     #content{
+         width: 200px;
+         height: 200px;
+         background-color: #212121;
+         /*margin-top: 20px;*/
+         margin: 20px auto ;
+     }
+    </style>
+<body>
+<div class="box" >
+    <input type="button" value="变宽">
+    <input type="button" value="变高">
+    <input type="button" value="变色">
+    <input type="button" value="隐藏">
+    <input type="button" value="重置">
+    <div id="content" style="display: block "></div>
+</div>
+<script>
+    var aZX = document.getElementsByTagName("input");
+    var oZX = document.getElementById("content");
+    var arr1 = ["width","height","background-color","display"];
+    var arr2 = ["300px","300px","blue","none"];
+    for(var i=0;i<aZX.length;i++){
+        aZX[i].index=i;
+        aZX[i].onclick=function () {
+            var zxc = arr1[this.index];
+            var asd = arr2[this.index];
+//            console.log(zxc) ;
+            this.index==4 ? oZX.style.cssText="" :oZX.style[zxc]=asd
+        }
+
+    }
+</script>
+</body>
+</html>

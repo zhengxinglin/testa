@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 700px;
+            height: 500px;
+            border: 1px solid #b0b0b0;
+            margin: 0 auto;
+            position: relative;
+            text-align: center ;
+            line-height: 500px;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+
+        }
+        ul{
+            list-style-type: none;
+            position: absolute;
+            bottom: 0;
+        }
+        li{
+            float: left;
+            display: block;
+            width: 175px;
+            height: 150px;
+            border: 1px solid #333333;
+            text-align: center ;
+            /*line-height: 150px;*/
+            position: relative;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
+        li img{
+            position: absolute;
+            top: 17%;
+            left: 7%;
+        }
+        .box .big-image img{
+            width: 400px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+<div class="box" >
+    <div class="big-image"><img  src="../practice/image/xmad_15161045260253_mAohp.jpg" alt="" id="big-image"></div>
+    <ul>
+        <li><img src="../practice/image/xmad_15161045260253_mAohp.jpg" alt=""></li>
+        <li><img src="../practice/image/xmad_15160273796228_QSeKH.jpg" alt=""></li>
+        <li><img src="../practice/image/xmad_15161024312126_mIVLw.jpg" alt=""></li>
+        <li><img src="../practice/image/背景.jpg"></li>
+    </ul>
+</div>
+<script>
+    var aZX = document.getElementsByTagName("img");
+    var aQW = document.getElementById("big-image");
+    for(var i=0;i<aZX.length;i++){
+        aZX[i].onmouseover=function () {
+            var qWE = this.getAttribute("src");
+            aQW.setAttribute("src",qWE);
+        }
+    }
+</script>
+</body>
+</html>
