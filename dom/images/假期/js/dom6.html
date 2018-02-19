@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*#content {*/
+            /*width: 636px;*/
+            /*height: 400px;*/
+            /*float: left;*/
+            /*position: relative;*/
+        /*}*/
+       #content ul li {
+           /*opacity: 0;*/
+           /*float: left;*/
+           /*display: block;*/
+           /*width: 636px;*/
+           /*height: 400px;*/
+           display: none;
+       }
+        .box{
+            width: 636px;
+            height: 400px;
+            border: 1px solid ;
+            /*overflow: hidden;*/
+            margin: 0 auto;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+        #content img{
+            width: 636px;
+            height: 400px;
+
+        }
+        ul{
+            list-style-type: none;
+        }
+        #content-left {
+            width: 40px;
+            height: 10px;
+            /*background-color: red;*/
+            z-index: 123;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+        #content-left ul{
+            width: 40px;
+            height: 10px;
+        }
+        #content-left li{
+            display: block;
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius:50%;
+            background-color: #f56600;
+            margin-left: 10px;
+        }
+      .box #content .active{
+            display: block;
+        }
+        #content-right{
+            width: 120px;
+            height: 20px;
+            /*background-color: #00d20d;*/
+            float: right;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+        #content-right li{
+            float: left;
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #f56600;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="content" >
+        <ul class="clearfix" >
+            <li class="active"><img src="../practice/image/xmad_15161024312126_mIVLw.jpg" alt=""></li>
+            <li><img src="../practice/image/xmad_15160273796228_QSeKH.jpg" alt=""></li>
+            <li><img src="../practice/image/xmad_15161045260253_mAohp.jpg" alt=""></li>
+            <li><img src="../practice/image/小米.png" alt=""></li>
+            <li><img src="../practice/image/背景.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div id="content-left">
+        <ul class="clearfix" >
+            <li class="pre"></li>
+            <li class="next"></li>
+        </ul>
+    </div>
+    <div id="content-right">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var aZX = document.getElementById("content-right").getElementsByTagName("li");
+    var aQZ = document.getElementById("content").getElementsByTagName("li");
+    var globalindex=0;
+    var oQA = document.getElementById("content-left").getElementsByTagName("li");
+    for(var k=0;k<oQA.length;k++){
+        oQA[k].onclick = function () {
+            var now = this.getAttribute("class");
+            {
+                if(now=="next"){
+                    if(globalindex+1<=4){
+                        change(globalindex+1)
+                    }
+                    else{
+                        change(0)
+                    }
+                }else{
+                    if(globalindex>1){
+                        change(globalindex-1)
+                    }
+                    else{
+                        change(4)
+                    }
+
+                }
+            }
+        }
+    }
+    for(var i=0;i<aZX.length;i++){
+        aZX[i].index=i;
+        aZX[i].onmouseover = function () {
+          change(this.index)
+        }
+    }
+    function change(index) {
+        for(var j=0;j<aZX.length;j++){
+            aQZ[j].className="";
+        }
+        aQZ[index].className="active";
+        globalindex=index;
+    }
+
+</script>
+</body>
+</html>
