@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            background-color: red;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+    var aZO = document.getElementsByTagName("div");
+    var timer;
+    for(var i=0;i<aZO.length;i++){
+        aZO[i].index = i;
+        aZO[i].onmouseover = function () {
+            clearInterval(this.timer);
+            var This = this;
+            this.timer = setInterval(function () {
+                if(aZO[This.index].offsetWidth == 800){
+                    clearInterval(This.timer)
+                }else{
+                    aZO[This.index].style.width = aZO[This.index].offsetWidth+100+"px"
+                }
+            },50)
+        };
+        aZO[i].onmouseout = function () {
+            clearInterval(this.timer);
+            var This = this;
+            this.timer = setInterval(function () {
+                if(aZO[This.index].offsetWidth<200){
+                    clearInterval(This.timer)
+                }else{
+                    aZO[This.index].style.width = aZO[This.index].offsetWidth-20+"px"
+                }
+            },50)
+        }
+    }
+</script>
+</body>
+</html>
