@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 400px;
+            height: 400px;
+        }
+        #box img{
+            width: 400px;
+            height: 400px;
+        }
+        #box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(265,265,265,0.3);
+        }
+        #content{
+            width: 400px;
+            height: 400px;
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 400px;
+            overflow: hidden;
+        }
+        #content img{
+            width: 800px;
+            height: 800px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box" >
+    <img src="../../xmad_15160273796228_QSeKH.jpg " alt="">
+    <div id="context"></div>
+</div>
+<div id="content">
+    <img src="../../xmad_15160273796228_QSeKH.jpg " alt="" id="picture">
+</div>
+<script>
+    var oQA = document.getElementById("box");
+    var oAZ = document.getElementById("context");
+    var oZA = document.getElementById("picture");
+    oQA.onmousemove = function (e) {
+        var This =e.clientX-100;
+        var That =e.clientY-100;
+            if(This<0){
+                This = 0
+            }
+            if(That<0){
+                That = 0
+            }
+            if(That>200){
+                That = 200
+            }
+            if(This>200){
+                This = 200
+            }
+            oAZ.style.left = This+"px";
+            oAZ.style.top = That+"px";
+            oZA.style.left = -This*2+"px";
+            oZA.style.top = -That*2+"px";
+//            if(oAZ.style.left<0){
+//                oAZ.style.left=0
+//            }
+//            if(oAZ.style.top<0)
+
+    };
+    oQA.onmouseout = function () {
+        oAZ.onmousemove = null
+    }
+</script>
+</body>
+</html>
