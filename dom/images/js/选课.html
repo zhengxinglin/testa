@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .clearfix:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        #box{
+            width: 600px;
+            height: 150px;
+            /*border: 1px solid #000000;*/
+            margin: 20px auto;
+            background-color: #b0b0b0;
+        }
+        #content ul{
+            border: 1px solid ;
+            /*color: white;*/
+            background-color: #212121;
+        }
+        #content li{
+            float: left;
+            /*border-right: 1px solid;*/
+            width: 199px;
+            /*border-bottom: 1px solid;*/
+            text-align: center ;
+            color: white;
+        }
+        #content li:last-child{
+            border-right: none ;
+        }
+       .active{
+            background-color: #f56600;
+        }
+        #context li{
+            display: none;
+        }
+        #box #context .active1{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="content">
+        <ul class="clearfix">
+            <li>第一课</li>
+            <li>第二课</li>
+            <li>第三课</li>
+        </ul>
+    </div>
+    <div id="context">
+        <ul>
+            <li class="active1">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</div>
+<script>
+    $("#content li").click(function () {
+        $("#content li").removeClass("active");
+        $(this).addClass("active");
+        $("#context li").css("display","none")
+        $("#context li").eq($(this).index()).css("display","block");
+
+    })
+</script>
+</body>
+</html>
