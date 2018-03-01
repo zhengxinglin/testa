@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="content">
+    <input type="checkbox" value="羽毛球">羽毛球
+    <input type="checkbox" value="篮球">篮球
+    <input type="checkbox" value="足球">足球
+    <input type="checkbox" value="水球">水球
+</div>
+<div id="box">
+    <button>全选</button>
+    <button>全不选</button>
+    <button>反选</button>
+</div>
+<script>
+    var $ball= $(" #content>input");
+
+    $(" #box > button").eq(0).click(function () {
+        $(" #content > input ").prop("checked", true)
+    });
+    $("  #box > button ").eq(1).click(function () {
+        $(" #content > input ").prop("checked", false)
+    });
+    $(" #box > button ").eq(2).click(function () {
+        for(var i=0;i<$ball.length;i++){
+            if($ball.eq(i).prop("checked")) {
+                $ball.eq(i).prop("checked",false)
+            }else{
+                $ball.eq(i).prop("checked",true)
+
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
