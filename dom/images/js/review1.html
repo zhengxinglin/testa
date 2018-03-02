@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .box{
+            width: 400px;
+            /*height: 85px;*/
+            margin: 40px auto;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+        .box p{
+            background-color: #212121;
+            color: white;
+        }
+        .box #content ul{
+            display: none;
+        }
+        .box #content .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul id="content">
+        <li>
+            <p>第一节课</p>
+            <ul>
+                <li>语文</li>
+                <li>数学</li>
+                <li>英语</li>
+                <li>物理</li>
+            </ul>
+        </li>
+        <li>
+            <p>第二节课</p>
+            <ul>
+                <li>语文</li>
+                <li>数学</li>
+                <li>英语</li>
+                <li>物理</li>
+            </ul>
+        </li>
+        <li>
+            <p>第三节课</p>
+            <ul>
+                <li>语文</li>
+                <li>数学</li>
+                <li>英语</li>
+                <li>物理</li>
+            </ul>
+        </li>
+        <li>
+            <p>第四节课</p>
+            <ul>
+                <li>语文</li>
+                <li>数学</li>
+                <li>英语</li>
+                <li>物理</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    $("p").click(function () {
+        $("#content ul").removeClass("active");
+        $(this).siblings("ul").toggleClass("active")
+    })
+</script>
+</body>
+</html>
