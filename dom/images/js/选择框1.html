@@ -27,14 +27,22 @@
         $(" #content > input ").prop("checked", false)
     });
     $(" #box > button ").eq(2).click(function () {
-        for(var i=0;i<$ball.length;i++){
-            if($ball.eq(i).prop("checked")) {
-                $ball.eq(i).prop("checked",false)
-            }else{
-                $ball.eq(i).prop("checked",true)
-
-            }
-        }
+        $ball.each(function (index,elem) {
+            elem.checked = !elem.checked
+//            if($(elem).prop("checked")){
+//                $(elem).prop("checked",false)
+//            }else{
+//                $(elem).prop("checked",true)
+//            }
+        })
+//        for(var i=0;i<$ball.length;i++){
+//            if($ball.eq(i).prop("checked")) {
+//                $ball.eq(i).prop("checked",false)
+//            }else{
+//                $ball.eq(i).prop("checked",true)
+//
+//            }
+//        }
 
     });
 </script>
