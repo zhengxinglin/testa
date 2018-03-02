@@ -21,24 +21,28 @@
             top:-5px
         }
         p{
-            width: 80px;
+            width: 100px;
             border-bottom:3px solid ;
             margin-top: 5px;
             text-align: center ;
-            z-index: 12;
+            /*position: relative;*/
+            z-index: 50;
         }
         .top1 ul{
             display: none;
+            width: 30px;
+            height: 100px;
+            border: 1px solid #00d20d;
+            /*position: relative;*/
+            z-index: 2;
         }
          #box .active{
             display: block;
         }
-        #box ul{
-            width: 30px;
-            height: 100px;
-            border: 1px solid #00d20d;
+        /*#box ul{*/
+           /**/
 
-        }
+        /*}*/
     </style>
 </head>
 <body>
@@ -95,14 +99,21 @@
 </ul>
 <script>
     $(function () {
-        $("p").mouseout(function () {
-            $("p").siblings().css("");
-            $("p").siblings().removeClass("active")
-        });
+
         $("p").mouseover(function () {
-            $(this).css({background:"white",borderColor:"green"});
+            $(this).css({
+                background:"white",
+                borderColor:"green",
+                position:relative,
+                zIndex:"10"
+            });
             $("p").siblings().removeClass("active");
             $(this).siblings().addClass("active");
+        });
+        $("p").mouseout(function () {
+           $(this).attr("style","");
+
+
         });
 
     })

@@ -160,7 +160,13 @@
         aQZ[index].className="active";
         globalindex=index;
     }
-
+    setInterval(function () {
+        if(globalindex>4){
+            globalindex=0
+        }else{
+            change(++globalindex);
+        }
+    },1000)
 </script>
 </body>
 </html>

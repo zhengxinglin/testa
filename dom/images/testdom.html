@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        ul{
+            list-style-type: none;
+        }
+        #text li{
+            float: left;
+            display: block;
+            width: 118px;
+            height: 25px;
+            text-align: center ;
+            border: 1px solid #212121;
+
+        }
+        #text1{
+            width: 358px;
+            height: 174px;
+            border: 1px solid #212121;
+        }
+        .active{
+            background-color: #b0b0b0;
+
+        }
+    </style>
+</head>
+<body>
+<div class="content" >
+    <ul id="text">
+        <li class="active">第一课</li>
+        <li>第二课</li>
+        <li>第三课</li>
+    </ul>
+    <div id="text1">
+        <ul>
+            <li>网页特效原理分析</li>
+        </ul>
+        <ul>
+            <li>改变网页背景颜色</li>
+        </ul>
+        <ul>
+            <li>JavaScript组成：ECMAScript、DOM、BOM，JavaScript兼容性来源</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var aAL = document.getElementById ("text").getElementsByTagName ("li");
+    var aOL = document.getElementById ("text1").getElementsByTagName ("ul");
+    for (var i=0;i<aAL.length;i++){
+        aAL[i].index=i;
+        aAL[i].onmouseover  = function () {
+            for(var j=0;j<aAL.length;j++){
+                aAL[j].className="";
+                aOL[j].style.display="none"
+            }this.className ="active";
+            aOL[this.index].style.display ="block"
+
+        }
+    }
+</script>
+</html>

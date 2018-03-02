@@ -30,7 +30,7 @@
             clearInterval(this.timer);
             var This = this;
             this.timer = setInterval(function () {
-                if(aZO[This.index].offsetWidth == 800){
+                if(aZO[This.index].offsetWidth > 800){
                     clearInterval(This.timer)
                 }else{
                     aZO[This.index].style.width = aZO[This.index].offsetWidth+100+"px"

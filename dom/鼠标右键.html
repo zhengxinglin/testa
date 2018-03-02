@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /**{*/
+            /*margin: 0;*/
+            /*padding: 0;*/
+        /*}*/
+     /*ul{*/
+         /*list-style-type: none;*/
+         /*border: 1px solid #ddd;*/
+         /*width: 150px;*/
+         /*display: none;*/
+         /*position: absolute;*/
+     /*}*/
+        /*ul li{*/
+            /*border-bottom: 1px solid #ddd;*/
+        /*}*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            border: 1px solid #ddd;
+            text-align: center ;
+            display: none;
+            width: 150px;
+            position: absolute;
+
+        }
+        ul li{
+            border-bottom: 1px solid #ddd;
+
+        }
+    </style>
+</head>
+<body>
+<!--<ul id="ul-menu" class="ul-cn">-->
+    <!--<li>设置待办</li>-->
+    <!--<li>设置已读</li>-->
+    <!--<li>设置未读</li>-->
+    <!--<li>删除邮件</li>-->
+<!--</ul>-->
+<ul id="ul-menu" class="bbb" >
+    <li links="www.baidu.com">设置待办</li>
+    <li links="www.mi.com">设置已读</li>
+    <li>设置未读</li>
+    <li>删除邮件</li>
+</ul>
+<input type="text" id="test-input" value="hello">
+<script>
+//   var oUL =  document.getElementById ("ul-menu");
+//    var aLi = document.getElementsByTagName ("Li");
+////    var uLCn = document.getElementsByClassName ("ul-cn");
+////    console .log(oUL);
+////   console .log(aUL[0].innerHTML);
+////   console .log(uLCn);
+////    oUL.onclick = function () {
+////        alert("1");
+////    }事件三要素 事件源 事件处理函数 事件对象
+//    document.oncontextmenu = function (e) {
+//        e = e | window.event;
+//        oUL.style.display = ("block");
+////        console .log(e.clientY)
+//        oUL.style.top = e.clientY + "px";
+//        oUL.style.left = e.clientX + "px";
+//
+//        return false;
+//    }
+//    document.onclick = function () {
+//        oUL.style.dispaly= "none"
+//    }
+////    aLi[0].onclick = function () {
+////        alert ("1")
+////    }
+//    for (var i=0; i<=aLi .length;i++){
+//        aLi[i].onclick = function () {
+//            var
+//        }
+//    }
+  var oUL =document.getElementById ("ul-menu");
+  var aUL =document .getElementById ("test-input");
+  var aLi= document.getElementsByTagName ("li");
+  alert(aUL.value);
+  document.oncontextmenu =function (e) {
+      e = e || window.event;
+     oUL.style.display ="block";
+     oUL.style.top=e.clientY +"px";
+     oUL.style.left =e.clientX +"px";
+     return false ;
+}
+document.onclick=function () {
+     oUL.style .display ="none"
+}
+for(i=0;i<=aLi.length ;i++){
+      aLi.onclick = function () {
+          var thislink = this.getAttribute("links");
+          location.href = "http://"+thislink;
+          var thisText =this.innerText;
+
+      }
+}
+
+</script>
+</body>
+</html>

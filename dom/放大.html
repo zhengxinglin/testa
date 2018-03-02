@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #top{
+            width: 512px;
+            height: 512px;
+            position: relative;
+            float: left;
+        }
+        #box {
+            width: 256px;
+            height: 256px;
+            background-color:rgba(255,255,255,0.6);
+            position: absolute;
+            z-index: 123;
+        }
+        #content1 {
+            width: 512px;
+            height: 512px;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            /*display: none;*/
+        }
+        #content1 img{
+            width:1024px;
+            height: 1024px;
+            position: absolute;
+        }
+        /*.active{*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div id="top">
+    <div id="box"></div>
+    <img src="images/QQ图片20180113155833.png" alt="" class=" content1">
+</div>
+<div id="content1" >
+    <img src="images/QQ图片20180113155833.png " alt="" id="active">
+</div>
+</body>
+<script>
+    var oQL = document.getElementById ("top");
+    var oAL = document.getElementById("box");
+    var oZL = document .getElementById ("active");
+
+    oQL .onmousemove = function (e) {
+        var thisX = e.clientX -128;
+        var thisY = e.clientY - 128;
+        if(thisX<0){
+            thisX = 0;
+        }
+        if(thisY<0){
+            thisY = 0;
+        }
+        if(thisX>256){
+            thisX = 256
+        }
+        if(thisY >256){
+            thisY = 256
+        }
+            oAL.style.left = thisX+"px";
+            oAL.style.top = thisY+"px";
+            oZL.style.left = -thisX*2 +"px";
+            oZL.style.top = - thisY*2 +"px";
+
+
+    };
+
+        
+
+
+</script>
+</html>

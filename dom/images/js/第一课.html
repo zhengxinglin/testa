@@ -18,7 +18,7 @@
             list-style-type: none;
         }
         .box{
-            border: 1px solid #dddddd;
+            border: 1px solid #000000;
             width: 450px;
             margin: 0 auto;
         }
@@ -45,18 +45,18 @@
             background-color: #dddddd;
             color: #333333;
         }
-        .bottom .actived{
+        .bottom .active{
             display: block;
         }
         .header .active{
-            background-color: #f56600;
+            background-color: #dddddd;
         }
     </style>..
 <body>
 <div class="box">
     <div class="header" id="nav">
         <ul class="clearfix">
-            <li class="active">第一课</li>
+            <li >第一课</li>
             <li >第二课</li>
             <li >第三课</li>
         </ul>
@@ -66,20 +66,21 @@
         <div>第二节课的内容</div>
         <div>第三节课的内容</div>
     </div>
-    <script>
-//        $("li").click(function () {
-//            $(this).toggleClass("active")
-//        })
-        var p = $("li");
-        var a = $(".bottom>div");
-        p.click(function(){
-            $(this).add($(".bottom>div:eq("+$(this).index()+")")).addClass("active").siblings().removeClass("active")
+
+</div>
+<script>
+    //        $("li").click(function () {
+    //            $(this).toggleClass("active")
+    //        })
+    var p = $("li");
+    //        var a = $(".bottom>div");
+    p.click(function(){
+        $(this).add($(".bottom>div:eq("+$(this).index()+")")).addClass("active").siblings().removeClass("active")
 //            $("li").removeClass("active");
 //            $(this).addClass("active");
 //            $a.css("display","none");
 //            $a.eq($(this).index()).css("display","block");
-        })
-    </script>
-</div>
+    })
+</script>
 </body>
 </html>

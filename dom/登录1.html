@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            width: 200px;
+            height: 150px;
+            text-align: center ;
+            margin: 0 auto;
+        }
+        #context{
+            width: 150px;
+            height: 80px;
+            background-color: burlywood;
+            border: 1px solid #212121;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+<div class="content" >
+    <label id="login"><input type="checkbox">两周后自动登录</label>
+    <div id="context">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
+</div>
+</body>
+<script>
+    var aAL = document.getElementById ("login");
+    var oAL = document.getElementById ("context");
+    aAL.onmouseover =function () {
+        oAL.style.display ="block"
+
+    }
+    aAL.onmouseout =function () {
+        oAL.style.display ="none"
+
+    }
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .box {
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px auto;
+        }
+        .content{
+            text-align: center ;
+            width: 100px;
+            height: 35px;
+            border: 1px solid black;
+            background-color: #212121;
+            color: white;
+            line-height: 35px;
+        }
+        .context li{
+            text-align: center ;
+        }
+
+        .but ul{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box" >
+    <ul class="but">
+        <li>
+            <div class="content" id="content1">选择一</div>
+            <ul class="context active" id="content3" >
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+        <li>
+            <div class="content" id="content2">选择二</div>
+            <ul class="context" id="content4">
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+   var oAL = document.getElementsByClassName ("but").getElementsByTagName("div")
+//   var oZL = document.getElementById ("content2");
+//   var aQL = document .getElementById ("content3").getElementsByTagName ("li");
+//   var aAL = document .getElementById ("content4").getElementsByTagName ("li");
+
+   for(var i=0;i<oAL.length;i+=){
+
+       oAL[i].onclick =function () {
+           if(oAL1.style.display == "block"){
+               oAL1[i].style.display = "none"
+           }
+
+           else{
+               oAL1[i].style.display = "block"
+           }
+       }
+
+   }
+
+
+    ?
+
+
+
+
+
+</script>
+</html>

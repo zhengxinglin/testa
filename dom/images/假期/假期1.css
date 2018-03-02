@@ -60,6 +60,7 @@ ul{
 .content .content1 .button{
     background-color: #f56600;
     margin-top: 23px;
+    border: none;
 }
 a{
     text-decoration: none ;

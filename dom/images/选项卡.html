@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head {
+            width: 600px;
+            margin: 0 auto;
+            position: relative;
+            height:420px ;
+        }
+        .clearfix:after{
+            content:"";
+            clear: both;
+            display: block;
+
+        }
+        .head img{
+            width: 600px;
+            height: 420px;
+            display: block;
+
+        }
+       .content-right  li{
+            float: left;
+            margin-left: 26px;
+            border-radius: 50%;
+            display: block;
+            width: 21px;
+            height: 21px;
+            background-color: #00aaee;
+            color: white;
+            text-align: center ;
+       }
+      .content  .content-right{
+           position:absolute;
+           right: 11px;
+           bottom: 15px;
+       }
+        ul{
+            list-style-type: none; 
+        }
+        .content-left li{
+            float: left;
+            display: block;
+            width: 21px;
+            height: 21px;
+            margin-left: 5px;
+            border-radius: 50%;
+            background-color: #00aaee;
+            color: white;
+            text-align: center ;
+            line-height: 17px;
+        }
+        .content-left {
+            position: absolute;
+            bottom: 12px;
+            left: 19px;
+        }
+        .head .context li{
+            display: none;
+        }
+        .head .context .context1{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="content">
+        <ul class="context" id="context">
+            <li class="context1"><img src="xmad_15150753566383_yLfQU.jpg " alt=""></li>
+            <li><img src="xmad_15161045260253_mAohp.jpg " alt=""></li>
+            <li><img src="xmad_15160273796228_QSeKH.jpg " alt=""></li>
+            <li><img src="xmad_15161024312126_mIVLw.jpg " alt=""></li>
+        </ul>
+        <ul class="content-left clearfix">
+            <li>&lt;</li>
+            <li>&gt;</li>
+        </ul>
+        <ul class="content-right clearfix" id="aaa">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+var aLI = document.getElementById("context").getElementsByTagName ("li");
+var aAL = document.getElementById ("aaa").getElementsByTagName ("li");
+for(var i=0;i<aAL.length;i++){
+    aAL[i].index = i;
+    aAL[i].onmouseover =function () {
+        for(var j=0;j<aAL.length;j++){
+            aLI[j].className="";
+        }
+        aLI[this.index].className="context1";
+
+    }
+}
+</script>
+</html>

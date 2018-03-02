@@ -27,7 +27,7 @@
             margin: 30px auto;
             border-radius: 10px ;
             background: #ffffff;
-            /*overflow: hidden;  !* 隐藏*!*/
+            overflow: hidden;  /* 隐藏*/
             height: 339px;
             padding: 10px ;
             position: relative;
@@ -70,6 +70,12 @@
         .box .img-bar li{
             float: left;
         }
+        .box .top{
+            position: relative;
+        }
+        .box .top li{
+            position: absolute;
+        }
 
 
     </style>
@@ -77,7 +83,7 @@
 <body>
 <div class="box">
     <div class="img-bar" id="content" >
-        <ul class="clearfix" style="width: 5000px">
+        <ul class="clearfix top" style="width: 5000px">
             <li><img src="images/xmad_15161024312126_mIVLw.jpg  " alt=""></li>
             <li><img src="images/xmad_15160273796228_QSeKH.jpg  " alt=""></li>
             <li><img src="images/xmad_15161045260253_mAohp.jpg " alt=""></li>
@@ -103,38 +109,134 @@
 </div>
 </body>
 <script>
-var aAL = document.getElementById ("content").getElementsByTagName ("li");
-var aZL = document.getElementById ("content1").getElementsByTagName ("li");
-var aQL =  document .getElementById ("content2").getElementsByTagName ("li");
-var globalindex = 0;
-for(var j=0; j<aQL.length;j++){
-    aQL[j] .index=j;
-    aQL[j].onmouseover = function () {
-        change(this.index);
-        globalindex=index;
+
+    var ali = document.getElementById ("content2").getElementsByTagName ("li");
+    var oImg = document .getElementById ("content").getElementsByTagName ("li");
+    var aBtn = document.
+    function changeImg(index) {
+        for(var j=0;j<aLi.length;j++){
+            aLi[j].className ="";
+        }
+
+      var timer =   setInterval (function () {
+            if(oImg.offsetLeft ==-index*490){
+                clearInterval(timer)
+            }
+            else{ oImg.style.left =oImg.offsetLeft-10+"px";
+            }
+
+        } , 50);
+        ali[index].className ="active";
     }
-}
-aZL[0].onclick =function () {
-    change(--globalindex);
-};
-aZL[1].onclick =function () {
-    change(++globalindex);
-};
-function change(a) {
-    if(a==5){
-        globalindex =0;
-        a=0;
+    changeImg(2);
+    for(var i =0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onmouseover = function () {
+
+        }
     }
-    if(a==-1){
-        globalindex =4;
-        a=4;
-    }
-    for(var i=0;i<aQL.length;i++){
-        aQL[i].className="";
-        aAL[i].style.display="none";
-    }
-    aQL[a].className="active";
-    aAL[a].style.display="block";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var aAL = document.getElementById ("content").getElementsByTagName ("li");
+//var aZL = document.getElementById ("content1").getElementsByTagName ("li");
+//var aQL =  document .getElementById ("content2").getElementsByTagName ("li");
+////var globalindex = 0;
+//for(var i=0;i<aQL.length;i++){
+//    aQL[i].index=i;
+//    aQL[i].onmouseover = function () {
+//        setInterval(function () {
+//            if(aAL[i].offsetLeft)
+//        },50)
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//for(var j=0; j<aQL.length;j++){
+//    aQL[j] .index=j;
+//    aQL[j].onmouseover = function () {
+//        change(this.index);
+//        globalindex=index;
+//    }
+//}
+//aZL[0].onclick =function () {
+//    change(--globalindex);
+//};
+//aZL[1].onclick =function () {
+//    change(++globalindex);
+//};
+//function change(a) {
+//    if(a==5){
+//        globalindex =0;
+//        a=0;
+//    }
+//    if(a==-1){
+//        globalindex =4;
+//        a=4;
+//    }
+//    for(var i=0;i<aQL.length;i++){
+//        aQL[i].className="";
+//        aAL[i].style.display="none";
+//    }
+//    aQL[a].className="active";
+//    aAL[a].style.display="block";
+//}
 </script>
 </html>

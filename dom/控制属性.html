@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            margin: 0 auto ;
+            text-align: center ;
+
+        }
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background-color: #212121;
+            display: none;
+            /*margin: 0 auto;*/
+        }
+    </style>
+</head>
+<body>
+<div id="div1" >
+    <input type="button" value="变高" >
+    <input type="button" value="变长">
+    <input type="button" value="变色" >
+    <input type="button" value="隐藏" >
+    <input type="button" value="重置" >
+</div>
+<div id="div2" style=""></div>input
+<script>
+    var oAL = document.getElementById ("");
+    var aAL = document.getElementById ("div2");
+    var change = ["width","height","background-color","dispaly","display"];
+    var change1 = ["200px","200px","red","none","block"];
+    for(var i=0;i<=oAL.length;i++){
+        oAL[i].index = i;
+        oAL[i].onclick =function () {
+            for(var j=0;j<=oAL.length ;j++){
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

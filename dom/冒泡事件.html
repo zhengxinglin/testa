@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<ul id="box">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+<script>
+    var bTN = document.getElementById ("btn");
+    var oUL = document.getElementById ("box");
+    var qaz = document.getElementsByTagName ("li");
+//    bTN.onclick = function () {
+//        var zxc =document.createElement("li");
+//            zxc.innerHTML =Math.random();
+//            oUL.appendChild(zxc);
+//    };
+    oUL.onclick = function (e) {
+//        var aa=document.createElement ("li");
+//        aa.innerHTML="123";
+//        oUL.appendChild (aa);
+        console.log(e.target.innerHTML)
+
+
+    }
+</script>
+</html>

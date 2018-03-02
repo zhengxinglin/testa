@@ -72,7 +72,7 @@
     $("#content li").click(function () {
         $("#content li").removeClass("active");
         $(this).addClass("active");
-        $("#context li").css("display","none")
+        $("#context li").css("display","none");
         $("#context li").eq($(this).index()).css("display","block");
 
     })
