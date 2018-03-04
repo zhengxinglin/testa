@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        clearfix:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        body{
+            font-size: 16px;
+            background-color: #343636;
+        }
+        .box{
+            width: 100%;
+        }
+        .box .header{
+            width: 750px;
+            height: 189.98px;
+            margin: 0 auto;
+        }
+        .box .header .top{
+            height: 93.99px;
+            background-color: white;
+        }
+        .box .header p{
+            height: 93.99px;
+            font-size: 1.8rem;
+            line-height: 93.99px;
+            margin-left: 20px;
+        }
+        .box .bottom{
+            height: 95px;
+            border-bottom: 1px solid #b0b0b0;
+        }
+        .box .bottom ul{
+            margin: 26px 0;
+            height: 39.44px;
+            padding-left: 40px;
+        }
+        .box .bottom li{
+            float: left;
+            margin-left: 12px;
+            width: 80px;
+            height: 80px;
+        }
+        .box .bottom .text{
+            float: left;
+            /*width: 57.59px;*/
+            /*height: 34px;*/
+            font-size: 1.8em;
+            color: #fff;
+        }
+        .content{
+            width: 750px;
+            padding:50px 420px 0;
+            /*height: 850px;*/
+            /*border-bottom: 1px solid #b0b0b0;*/
+
+
+        }
+        .box .border{
+            width: 777px;
+            border: 0.5px solid #b0b0b0;
+            position: relative;
+            left: 356px;
+            top: 46px;
+        }
+        /*.box .content ul:nth-child(10){*/
+            /*width: 712px;*/
+            /*padding-bottom: 40px;*/
+            /*border-bottom: 1px solid #b0b0b0;*/
+        /*}*/
+        .box .content ul{
+            width: 690px;
+            height: 34.99px;
+            margin-top: 50px;
+        }
+        .select1{
+            width: 45px;
+            height: 35px;
+            background-color: white;
+            display: inline-block;
+        }
+        .selected1{
+            width: 45px;
+            height: 35px;
+            background-color: red;
+            display: inline-block;
+        }
+        .sell1{
+            width: 45px;
+            height: 35px;
+            background-color: #00aaee;
+            display: inline-block;
+        }
+        .content{
+            /*height: 800px;*/
+        }
+        .box .content li{
+            display: block;
+            width: 45px;
+            height: 35px;
+            float: left;
+            margin: 5px;
+        }
+        #content-list  li:nth-child(6){
+            margin-left: 100px;
+        }
+        #content-list .select{
+            background-color: white;
+        }
+        #content-list .selected{
+            background-color: red;
+        }
+        #content-list .sell{
+            background-color: #00aaee;
+        }
+        .box .context{
+            margin-top: 40px;
+            width: 100%;
+            height: 128.77px;
+        }
+        .box .context #context1{
+            width: 750px;
+            margin: 0 auto;
+            height: 128.77px;
+        }
+        .box #context1 p{
+            display: block;
+            font-size: 1.8rem;
+            /*padding: 45px 30px;*/
+            color: #fff;
+            width: 250px;
+            /*margin-top: 20px;*/
+        }
+        .box #context1 p:first-child{
+            margin-top: 107px;
+        }
+        .box #context1 p:last-child{
+            float: right;
+            margin-top: -32px;
+        }
+        .bottom1{
+            width: 100%;
+            height: 95.99px;
+            position: fixed;
+            bottom: 0;
+            left: 404px;
+        }
+        .bottom1 .left{
+            width: 432px;
+            height: 95.99px;
+            background-color: #4a4c52;
+            line-height: 95.99px;
+            /*position: fixed;*/
+            left: 50px;
+
+        }
+        .bottom1 .right{
+            width: 240px;
+            height: 95.99px;
+            /*float: right;*/
+            color: #333;
+            background-color: #c1a55f;
+            position: relative;
+            left: 432px;
+            bottom:96px
+        }
+        .bottom1 .right button {
+            width: 240px;
+            height: 6rem;
+            line-height: 6rem;
+            float: left;
+            font-size: 1.8rem;
+            background-color: #c1a55f;
+            /*position: fixed;*/
+        }
+        .bottom1 .left span:first-child{
+            color: #b1b1b1;
+            line-height: 6rem;
+            float: left;
+            font-size: 1.8rem;
+        }
+        .bottom1 .left span:last-child{
+            color: #b1b1b1;
+            line-height: 6rem;
+            /*float: left;*/
+            /*font-size: 1.8rem;*/
+        }
+        .bottom1 .money{
+            color: #cc3300;
+            line-height: 6rem;
+            float: left;
+            font-size: 1.8rem;
+        }
+        .bottom2 ul li{
+            display: inline-block;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            text-align: center;
+            width: 8rem;
+            color:#cfa972;
+            font-size: 1.8rem;
+            border:1px solid #cfa972;
+            margin:0 0 30px 30px;
+        }
+        .bottom2{
+            width: 750px;
+            height: 150px;
+            position: relative;
+            left: 398px;
+            bottom: 77px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header">
+        <div class="top" >
+            <p>今天1月6日 13:20</p>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li><span class="select1"></span><span class="text" >可选</span></li>
+                <li><span class="selected1" ></span><span class="text">已选</span></li>
+                <li><span class="sell1"></span><span class="text">已售</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content" id="seat" >
+
+    </div>
+    <div class="border"></div>
+    <div class="context"  >
+        <div id="context1" class="clearfix">
+            <p>已选座位</p>
+            <p>最多可选五个座位</p>
+        </div>
+    </div>
+    <div class="bottom2">
+
+    </div>
+    <div class="bottom1">
+        <div class="left">
+            <span>&nbsp&nbsp&nbsp&nbsp合计:&nbsp&nbsp</span>
+            <span class="money">￥&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp
+            <span class="money1" >&nbsp&nbsp￥99*0</span>
+        </div>
+        <div class="right">
+            <button>确认选座</button>
+        </div>
+    </div>
+</div>
+<script>
+    thisarr = [];
+    function movie() {
+        var Qaz="";
+        for(var i=0;i<10;i++){
+            Qaz +='<ul id="content-list">';
+            for(var j=0;j<10;j++){
+                if(Math.random()>0.5){
+                    Qaz+='<li class="sell" sign="'+(i+1)+'排'+(j+1)+'座" ></li>';
+                }else{
+                    Qaz+='<li class="select" sign="'+(i+1)+'排'+(j+1)+'座" ></li>';
+
+                }
+            }
+            Qaz+='</ul>'
+        }
+        $("#seat").html(Qaz)
+    }
+    $("#seat").on('click','li',function () {
+        if($(this).attr("class")=="select" && thisarr.length<5){
+            $(this).attr("class","selected")
+            thisarr.push($(this).attr("sign"))
+        }else if($(this).attr("class")=="selected"){
+            $(this).attr("class","select");
+            remove($(this).attr("sign"));
+        }
+        change()
+    });
+    function remove(arr) {
+        for(var k=0;k<thisarr.length;k++){
+            if(thisarr[k]==arr){
+                thisarr.splice(k,1)
+            }
+        }
+    }
+    function change() {
+        $(".money").html("￥"+thisarr.length*99);
+        $(".money1").html("￥99*"+thisarr.length);
+        var thishtml = "<ul>";
+        for(var l=0;l<thisarr.length;l++){
+            thishtml+='<li>'+thisarr[l]+'</li>'
+        }
+        thishtml+="</ul>";
+        $(".bottom2").html(thishtml);
+    }
+    movie()
+</script>
+</body>
+</html>
