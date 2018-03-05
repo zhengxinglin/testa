@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="text" id="select">
+<p>1</p>
+<p>11</p>
+<p>22</p>
+<p>13</p>
+<p>159</p>
+<script>
+    $("#select").keyup(function () {
+        $("p").css("background","none");
+        if($(this).val()!=""){
+            $("p:contains("+$(this).val()+")").css("background","red");
+        }
+    })
+</script>
+</body>
+</html>
