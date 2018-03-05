@@ -55,7 +55,7 @@
                 $("#left>option:selected").appendTo("#right")
             });
         });
-        $("#left").on("dblclick","option",function () {
+        $("#right").on("dblclick","option",function () {
             $("#right>option").dblclick(function () {
                 $("#right>option:selected").appendTo("#left")
             });
