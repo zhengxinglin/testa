@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #00aaee;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<button id="show">show</button>
+<button id="hide">hide</button>
+<button id="toggle">toggle</button>
+<button id="fadein">fadein</button>
+<button id="fadeout">fadeout</button>
+<button id="slideup">slideup</button>
+<button id="slidedown">slidedown</button>
+<button id="animate">animate</button>
+<button id="animated">animated</button>
+
+
+<div id="box"></div>
+<script>
+    $("#show").click(function () {
+        $("#box").show()
+    });
+    $("#hide").click(function () {
+        $("#box").hide()
+    });
+    $("#toggle").click(function () {
+        $("#box").toggle()
+    });
+    $("#fadein").click(function () {
+        $("#box").fadeIn()
+    });
+    $("#fadeout").click(function () {
+        $("#box").fadeOut()
+    });
+    $("#slideup").click(function () {
+        $("#box").slideUp()
+    });
+    $("#slidedown").click(function () {
+        $("#box").slideDown()
+    });
+    $("#animate").click(function () {
+        $("#box").animate({
+            opacity:0.5,
+            height:'500'
+        },1000)
+    });
+    $("#animated").click(function () {
+        $("#box:animated").css("background","red")
+    })
+</script>
+</body>
+</html>
